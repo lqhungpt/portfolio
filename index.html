@@ -68,27 +68,52 @@
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero__copy">
-          <h1>Hung Q. Luong</h1>
-          <p class="hero__lede">
-            PhD Candidate at University of Nebraska-Lincoln | DVM | M.S. in
-            Veterinary Science | Vaccine Development | Immunogenomics | Viral
-            Genomics
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#publications">Selected papers</a>
-            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+      <section class="hero hero--merged" aria-label="Introduction">
+        <div class="hero-story" data-step="0">
+          <div class="hero-story__canvas">
+            <img
+              class="hero-story__frame is-active"
+              src="images/hero-slide-1.png"
+              width="1024"
+              height="716"
+              alt=""
+              data-caption="Vaccine delivery with lipid nanoparticles in mouse and pig models"
+            />
+            <img
+              class="hero-story__frame"
+              src="images/hero-slide-2.png"
+              width="1024"
+              height="716"
+              alt=""
+              data-caption="Activation of humoral and cellular immune responses"
+            />
           </div>
-        </div>
-        <div class="hero__visual">
-          <img
-            class="hero__image"
-            src="images/hero-vaccine.png"
-            width="1024"
-            height="633"
-            alt="Vaccine delivery with lipid nanoparticles inducing humoral and cellular immune responses in mouse and pig models"
-          />
+
+          <div class="hero-story__panel">
+            <p class="eyebrow">Vaccine immunology</p>
+            <h1>Hung Q. Luong</h1>
+            <p class="hero__lede">
+              PhD Candidate at University of Nebraska-Lincoln | DVM | M.S. in
+              Veterinary Science | Vaccine Development | Immunogenomics | Viral
+              Genomics
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#publications">Selected papers</a>
+              <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            </div>
+
+            <div class="hero-story__controls" role="tablist" aria-label="Vaccine story steps">
+              <button type="button" role="tab" aria-selected="true" data-step="0" class="is-active">
+                1 · Delivery
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-step="1">
+                2 · Immunity
+              </button>
+            </div>
+            <p class="hero-story__caption" aria-live="polite">
+              Vaccine delivery with lipid nanoparticles in mouse and pig models
+            </p>
+          </div>
         </div>
       </section>
 
