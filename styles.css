@@ -431,54 +431,83 @@ main {
 }
 
 .icon-arrows {
-  width: min(72vw, 220px);
+  width: min(58vw, 170px);
   height: auto;
 }
 
 .flow-arrow {
-  stroke-dasharray: 280;
-  stroke-dashoffset: 280;
-  animation: draw-arrow 2.2s ease-in-out infinite;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: draw-arrow 2.4s ease-in-out infinite;
+}
+
+.flow-arrow--trunk {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation-name: draw-trunk;
+}
+
+.flow-arrow--branch {
+  animation-delay: 0.28s;
 }
 
 .flow-head {
+  transform-box: fill-box;
   transform-origin: center;
-  animation: pulse-head 2.2s ease-in-out infinite;
+  animation: pulse-head 2.4s ease-in-out infinite;
+  animation-delay: 0.45s;
 }
 
-@keyframes draw-arrow {
+@keyframes draw-trunk {
   0% {
-    stroke-dashoffset: 280;
+    stroke-dashoffset: 120;
     opacity: 0.35;
   }
-  35% {
+  30% {
     stroke-dashoffset: 0;
     opacity: 1;
   }
-  70% {
+  75% {
     stroke-dashoffset: 0;
     opacity: 1;
   }
   100% {
-    stroke-dashoffset: -40;
-    opacity: 0.45;
+    stroke-dashoffset: 0;
+    opacity: 0.55;
+  }
+}
+
+@keyframes draw-arrow {
+  0%,
+  20% {
+    stroke-dashoffset: 220;
+    opacity: 0.2;
+  }
+  55% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.5;
   }
 }
 
 @keyframes pulse-head {
   0%,
-  25% {
-    opacity: 0.25;
-    transform: translateX(-4px);
+  35% {
+    opacity: 0.15;
   }
-  40%,
-  70% {
+  55%,
+  80% {
     opacity: 1;
-    transform: translateX(0);
   }
   100% {
     opacity: 0.4;
-    transform: translateX(2px);
   }
 }
 
@@ -535,7 +564,7 @@ main {
   }
 
   .icon-arrows {
-    width: min(100%, 168px);
+    width: min(100%, 140px);
   }
 
   .icon-syringe-lnp {
@@ -558,7 +587,7 @@ main {
   }
 
   .icon-arrows {
-    width: 200px;
+    width: 160px;
   }
 
   .arrows-label {

@@ -114,31 +114,45 @@
               </div>
             </div>
 
-            <div class="hero-diagram__arrows" aria-hidden="false">
+            <div class="hero-diagram__arrows">
               <p class="arrows-label">Simultaneous testing</p>
-              <svg class="icon-arrows" viewBox="0 0 220 180" role="img" aria-label="Two parallel arrows showing simultaneous immune testing">
-                <!-- top wavy arrow -->
+              <svg
+                class="icon-arrows"
+                viewBox="0 0 200 220"
+                role="img"
+                aria-label="One pathway that branches into humoral and cellular immune responses"
+              >
+                <!-- trunk -->
                 <path
-                  class="flow-arrow"
-                  d="M12 52 C48 28, 88 76, 128 48 C152 32, 172 40, 188 52"
+                  class="flow-arrow flow-arrow--trunk"
+                  d="M8 110 H88"
                   fill="none"
                   stroke="#1d1d1f"
-                  stroke-width="10"
+                  stroke-width="12"
+                  stroke-linecap="round"
+                />
+                <!-- branch fork -->
+                <path
+                  class="flow-arrow flow-arrow--branch"
+                  d="M88 110 C118 110, 128 56, 158 48"
+                  fill="none"
+                  stroke="#1d1d1f"
+                  stroke-width="12"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-                <polygon class="flow-head" points="178,36 214,52 178,68" fill="#1d1d1f" />
-                <!-- bottom wavy arrow -->
                 <path
-                  class="flow-arrow"
-                  d="M12 128 C48 104, 88 152, 128 124 C152 108, 172 116, 188 128"
+                  class="flow-arrow flow-arrow--branch"
+                  d="M88 110 C118 110, 128 164, 158 172"
                   fill="none"
                   stroke="#1d1d1f"
-                  stroke-width="10"
+                  stroke-width="12"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-                <polygon class="flow-head" points="178,112 214,128 178,144" fill="#1d1d1f" />
+                <!-- heads -->
+                <polygon class="flow-head" points="150,30 188,48 150,66" fill="#1d1d1f" />
+                <polygon class="flow-head" points="150,154 188,172 150,190" fill="#1d1d1f" />
               </svg>
             </div>
 
