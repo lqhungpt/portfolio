@@ -970,10 +970,8 @@ main {
   max-width: 48rem;
 }
 
-.skills-meta {
-  margin-top: 1rem !important;
-  color: var(--ink-muted);
-  font-size: 0.95rem;
+.skills-row p + p {
+  margin-top: 0.55rem;
 }
 
 .contact-links {
