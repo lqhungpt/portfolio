@@ -13,8 +13,6 @@
   --ring: rgba(29, 29, 31, 0.14);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
   --header-bg: rgba(255, 255, 255, 0.82);
-  --blueprint-stroke: rgba(29, 29, 31, 0.22);
-  --blueprint-fill: rgba(232, 120, 0, 0.14);
   --font-sans: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
@@ -38,8 +36,6 @@
   --ring: rgba(245, 245, 247, 0.14);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   --header-bg: rgba(0, 0, 0, 0.82);
-  --blueprint-stroke: rgba(245, 245, 247, 0.28);
-  --blueprint-fill: rgba(245, 165, 36, 0.16);
   color-scheme: dark;
 }
 
@@ -418,19 +414,22 @@ main {
 
 .hero__visual {
   justify-self: center;
-  width: min(100%, 320px);
+  width: min(100%, 560px);
   animation: rise-in 1s var(--ease) both;
 }
 
-@media (min-width: 520px) {
-  .hero__visual {
-    width: min(100%, 400px);
-  }
+.hero__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.25rem;
+  background: #fff;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
 }
 
 @media (min-width: 920px) {
   .hero__visual {
-    width: min(100%, 460px);
+    width: min(100%, 620px);
   }
 }
 
@@ -447,74 +446,6 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.blueprint {
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(var(--shadow));
-}
-
-.blueprint__ring {
-  fill: none;
-  stroke: var(--blueprint-stroke);
-  stroke-width: 1.25;
-  stroke-dasharray: 4 8;
-  animation: spin 48s linear infinite;
-  transform-origin: 260px 260px;
-}
-
-.blueprint__ring--mid {
-  stroke-dasharray: 2 10;
-  animation-duration: 36s;
-  animation-direction: reverse;
-}
-
-.blueprint__ring--inner {
-  stroke-dasharray: 1 6;
-  animation-duration: 24s;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.blueprint__virion {
-  fill: var(--blueprint-fill);
-  stroke: var(--accent);
-  stroke-width: 2;
-}
-
-.blueprint__spikes ellipse {
-  fill: var(--accent);
-  opacity: 0.85;
-}
-
-.blueprint__ab path {
-  fill: none;
-  stroke: var(--ink);
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  opacity: 0.75;
-}
-
-.blueprint__ab circle {
-  fill: var(--accent);
-}
-
-.blueprint__ab--secondary {
-  opacity: 0.55;
-}
-
-.blueprint__label {
-  fill: var(--ink-muted);
-  font-family: var(--font-sans);
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .section {
@@ -914,7 +845,6 @@ main {
   }
 
   .page-glow,
-  .blueprint__ring,
   .hero__copy,
   .hero__visual,
   .site-header.is-nav-open .nav {
