@@ -554,6 +554,22 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem 2rem;
   }
+
+  .focus-grid--viruses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 899px) {
+  .focus-grid--viruses {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .focus-grid--viruses {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .focus-grid li {
@@ -561,13 +577,22 @@ main {
   border-top: 2px solid var(--accent);
 }
 
+.focus-tag {
+  margin: 0 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
 .focus-grid h3 {
   margin: 0 0 0.45rem;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 650;
 }
 
-.focus-grid p {
+.focus-grid p:not(.focus-tag) {
   margin: 0;
   color: var(--ink-muted);
   font-size: 0.98rem;
