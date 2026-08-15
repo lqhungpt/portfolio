@@ -332,6 +332,10 @@ main {
   background: #f2f1ee;
 }
 
+[data-theme="dark"] .hero {
+  background: #000000;
+}
+
 .hero-intro {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
@@ -349,12 +353,20 @@ main {
   color: #1a1a1a;
 }
 
+[data-theme="dark"] .hero h1 {
+  color: #f5f5f7;
+}
+
 .hero__lede {
   margin: 0.25rem 0 0;
   max-width: 48rem;
   font-size: 14px;
   line-height: 1.45;
   color: #5f5f5f;
+}
+
+[data-theme="dark"] .hero__lede {
+  color: #a1a1a6;
 }
 
 .hero__actions {
@@ -431,6 +443,27 @@ main {
   color: #1a1a1a;
 }
 
+[data-theme="dark"] .btn--dark {
+  background: #f5f5f7;
+  color: #000;
+}
+
+[data-theme="dark"] .btn--dark:hover {
+  background: #fff;
+  color: #000;
+}
+
+[data-theme="dark"] .btn--soft {
+  background: #1d1d1f;
+  color: #f5f5f7;
+  border-color: rgba(245, 245, 247, 0.18);
+}
+
+[data-theme="dark"] .btn--soft:hover {
+  background: #2c2c2e;
+  color: #f5f5f7;
+}
+
 .btn--primary {
   background: var(--accent);
   color: #1a1208;
@@ -479,6 +512,11 @@ main {
   font-weight: 700;
   line-height: 1.25;
   color: #1d1d1f;
+}
+
+[data-theme="dark"] .lnp-label,
+[data-theme="dark"] .outcome-card p {
+  color: #f5f5f7;
 }
 
 .hero-diagram__animals {
