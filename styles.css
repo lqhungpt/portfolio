@@ -424,19 +424,52 @@ main {
 .icon-arrows {
   width: min(88vw, 280px);
   height: auto;
+  overflow: visible;
 }
 
-.flow-arrow {
-  stroke-dasharray: 260;
-  stroke-dashoffset: 0;
-  animation: none;
+.flow-base {
+  opacity: 0.92;
 }
 
-.flow-arrow--trunk,
-.flow-arrow--branch,
+.flow-dash {
+  stroke-dasharray: 18 16;
+  animation: flow-move 1.1s linear infinite;
+}
+
+.flow-dash--up,
+.flow-dash--down {
+  animation-delay: 0.15s;
+}
+
 .flow-head {
-  opacity: 1;
-  animation: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: head-nudge 1.1s ease-in-out infinite;
+}
+
+.flow-head--down {
+  animation-delay: 0.15s;
+}
+
+@keyframes flow-move {
+  from {
+    stroke-dashoffset: 68;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes head-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
 }
 
 .hero-diagram__stage--outcomes {
@@ -985,7 +1018,7 @@ main {
 
   .page-glow,
   .site-header.is-nav-open .nav,
-  .flow-arrow,
+  .flow-dash,
   .flow-head {
     animation: none;
   }

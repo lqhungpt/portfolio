@@ -114,41 +114,27 @@
               </div>
             </div>
 
-            <div class="hero-diagram__arrows" aria-hidden="true">
+            <div class="hero-diagram__arrows">
               <svg
                 class="icon-arrows"
                 viewBox="0 0 200 220"
                 role="img"
-                aria-label="Pathway branching into humoral and cellular immune responses"
+                aria-label="Animated pathway branching into humoral and cellular immune responses"
               >
-                <path
-                  class="flow-arrow flow-arrow--trunk"
-                  d="M4 110 H92"
-                  fill="none"
-                  stroke="#1d1d1f"
-                  stroke-width="14"
-                  stroke-linecap="round"
-                />
-                <path
-                  class="flow-arrow flow-arrow--branch"
-                  d="M92 110 C124 110, 136 52, 160 44"
-                  fill="none"
-                  stroke="#1d1d1f"
-                  stroke-width="14"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  class="flow-arrow flow-arrow--branch"
-                  d="M92 110 C124 110, 136 168, 160 176"
-                  fill="none"
-                  stroke="#1d1d1f"
-                  stroke-width="14"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <polygon class="flow-head" points="148,22 196,44 148,66" fill="#1d1d1f" />
-                <polygon class="flow-head" points="148,154 196,176 148,198" fill="#1d1d1f" />
+                <!-- solid base (always visible) -->
+                <g class="flow-base" fill="none" stroke="#1d1d1f" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 110 H92" />
+                  <path d="M92 110 C124 110, 136 52, 160 44" />
+                  <path d="M92 110 C124 110, 136 168, 160 176" />
+                </g>
+                <!-- moving flow highlight -->
+                <g class="flow-move" fill="none" stroke="#6e6e73" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+                  <path class="flow-dash flow-dash--trunk" d="M4 110 H92" />
+                  <path class="flow-dash flow-dash--up" d="M92 110 C124 110, 136 52, 160 44" />
+                  <path class="flow-dash flow-dash--down" d="M92 110 C124 110, 136 168, 160 176" />
+                </g>
+                <polygon class="flow-head flow-head--up" points="148,22 196,44 148,66" fill="#1d1d1f" />
+                <polygon class="flow-head flow-head--down" points="148,154 196,176 148,198" fill="#1d1d1f" />
               </svg>
             </div>
 
