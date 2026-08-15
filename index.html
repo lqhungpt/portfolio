@@ -114,12 +114,31 @@
               </div>
             </div>
 
-            <div class="hero-diagram__arrows" aria-hidden="true">
-              <svg class="icon-arrows" viewBox="0 0 120 160">
-                <path class="flow-arrow" d="M10 48 C48 48, 70 28, 108 28" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" />
-                <polygon points="100,18 118,28 100,38" fill="#1d1d1f" />
-                <path class="flow-arrow flow-arrow--delay" d="M10 112 C48 112, 70 132, 108 132" fill="none" stroke="#1d1d1f" stroke-width="6" stroke-linecap="round" />
-                <polygon points="100,122 118,132 100,142" fill="#1d1d1f" />
+            <div class="hero-diagram__arrows" aria-hidden="false">
+              <p class="arrows-label">Simultaneous testing</p>
+              <svg class="icon-arrows" viewBox="0 0 220 180" role="img" aria-label="Two parallel arrows showing simultaneous immune testing">
+                <!-- top wavy arrow -->
+                <path
+                  class="flow-arrow"
+                  d="M12 52 C48 28, 88 76, 128 48 C152 32, 172 40, 188 52"
+                  fill="none"
+                  stroke="#1d1d1f"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <polygon class="flow-head" points="178,36 214,52 178,68" fill="#1d1d1f" />
+                <!-- bottom wavy arrow -->
+                <path
+                  class="flow-arrow"
+                  d="M12 128 C48 104, 88 152, 128 124 C152 108, 172 116, 188 128"
+                  fill="none"
+                  stroke="#1d1d1f"
+                  stroke-width="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <polygon class="flow-head" points="178,112 214,128 178,144" fill="#1d1d1f" />
               </svg>
             </div>
 

@@ -415,22 +415,91 @@ main {
 }
 
 .hero-diagram__arrows {
-  display: none;
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0;
+}
+
+.arrows-label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
 }
 
 .icon-arrows {
-  width: 84px;
+  width: min(72vw, 220px);
   height: auto;
 }
 
 .flow-arrow {
-  stroke-dasharray: 140;
-  stroke-dashoffset: 140;
-  animation: draw-arrow 2.4s var(--ease) infinite;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: draw-arrow 2.2s ease-in-out infinite;
 }
 
-.flow-arrow--delay {
-  animation-delay: 0.35s;
+.flow-head {
+  transform-origin: center;
+  animation: pulse-head 2.2s ease-in-out infinite;
+}
+
+@keyframes draw-arrow {
+  0% {
+    stroke-dashoffset: 280;
+    opacity: 0.35;
+  }
+  35% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -40;
+    opacity: 0.45;
+  }
+}
+
+@keyframes pulse-head {
+  0%,
+  25% {
+    opacity: 0.25;
+    transform: translateX(-4px);
+  }
+  40%,
+  70% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0.4;
+    transform: translateX(2px);
+  }
+}
+
+@media (min-width: 720px) {
+  .hero-diagram__arrows {
+    padding: 0 0.25rem;
+  }
+
+  .icon-arrows {
+    width: min(100%, 168px);
+  }
+}
+
+@media (min-width: 980px) {
+  .icon-arrows {
+    width: 200px;
+  }
+
+  .arrows-label {
+    font-size: 0.82rem;
+  }
 }
 
 .hero-diagram__stage--outcomes {
@@ -465,11 +534,20 @@ main {
 
 @keyframes draw-arrow {
   0% {
-    stroke-dashoffset: 140;
+    stroke-dashoffset: 280;
+    opacity: 0.35;
   }
-  40%,
-  100% {
+  35% {
     stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -40;
+    opacity: 0.45;
   }
 }
 
@@ -494,8 +572,8 @@ main {
     place-items: center;
   }
 
-  .icon-syringe-lnp {
-    width: 128px;
+  .icon-arrows {
+    width: min(100%, 168px);
   }
 
   .icon-animals {
@@ -980,7 +1058,8 @@ main {
 
   .page-glow,
   .site-header.is-nav-open .nav,
-  .flow-arrow {
+  .flow-arrow,
+  .flow-head {
     animation: none;
   }
 }
