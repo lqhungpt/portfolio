@@ -52,3 +52,17 @@ window
       setTheme(event.matches ? "dark" : "light");
     }
   });
+
+document.querySelectorAll(".research-point").forEach((point) => {
+  point.addEventListener("click", () => {
+    const wasActive = point.classList.contains("is-active");
+    document.querySelectorAll(".research-point").forEach((other) => {
+      other.classList.remove("is-active");
+      other.setAttribute("aria-expanded", "false");
+    });
+    if (!wasActive) {
+      point.classList.add("is-active");
+      point.setAttribute("aria-expanded", "true");
+    }
+  });
+});
