@@ -954,6 +954,17 @@ main {
   font-size: 0.92rem;
 }
 
+.pubs__meta {
+  font-size: 0.88rem;
+}
+
+.pubs__abstract {
+  margin-top: 0.15rem;
+  max-width: 46rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .skills-row p {
   margin: 0;
   max-width: 48rem;
