@@ -482,26 +482,6 @@ main {
   }
 }
 
-@media (min-width: 720px) {
-  .hero-diagram__arrows {
-    padding: 0 0.25rem;
-  }
-
-  .icon-arrows {
-    width: min(100%, 168px);
-  }
-}
-
-@media (min-width: 980px) {
-  .icon-arrows {
-    width: 200px;
-  }
-
-  .arrows-label {
-    font-size: 0.82rem;
-  }
-}
-
 .hero-diagram__stage--outcomes {
   display: grid;
   gap: 0.85rem;
@@ -532,25 +512,6 @@ main {
   background: transparent;
 }
 
-@keyframes draw-arrow {
-  0% {
-    stroke-dashoffset: 280;
-    opacity: 0.35;
-  }
-  35% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  70% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: -40;
-    opacity: 0.45;
-  }
-}
-
 @media (min-width: 720px) {
   .hero-cover__text {
     padding: 1.6rem 1.75rem 0.75rem;
@@ -570,10 +531,15 @@ main {
   .hero-diagram__arrows {
     display: grid;
     place-items: center;
+    padding: 0 0.25rem;
   }
 
   .icon-arrows {
     width: min(100%, 168px);
+  }
+
+  .icon-syringe-lnp {
+    width: 128px;
   }
 
   .icon-animals {
@@ -589,6 +555,14 @@ main {
 @media (min-width: 980px) {
   .hero-diagram {
     padding-inline: 2rem;
+  }
+
+  .icon-arrows {
+    width: 200px;
+  }
+
+  .arrows-label {
+    font-size: 0.82rem;
   }
 
   .lnp-label {
