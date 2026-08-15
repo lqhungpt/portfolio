@@ -369,13 +369,13 @@ main {
 .hero-diagram {
   display: grid;
   gap: 1rem;
-  padding: 0.5rem 1rem 1.25rem;
+  padding: 0.35rem 1rem 1.25rem;
   color: #1d1d1f;
 }
 
 .hero-diagram__stage--delivery {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.65rem;
   justify-items: center;
 }
 
@@ -384,41 +384,18 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.85rem 1.1rem;
+  gap: 0.75rem 1rem;
 }
 
-.icon-syringe {
-  width: 52px;
+.icon-syringe-lnp {
+  display: block;
+  width: min(28vw, 118px);
   height: auto;
 }
 
-.syringe-plunger,
-.syringe-rod {
-  fill: #d2d2d7;
-  stroke: #1d1d1f;
-  stroke-width: 2;
-}
-
-.syringe-fluid {
-  fill: #f07167;
-  animation: fluid-pulse 2.8s ease-in-out infinite;
-}
-
-.lnp-chip {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  max-width: 15rem;
-}
-
-.icon-lnp {
-  width: 52px;
-  height: 52px;
-  flex-shrink: 0;
-  animation: lnp-spin 10s linear infinite;
-}
-
-.lnp-chip span {
+.lnp-label {
+  margin: 0;
+  max-width: 9.5rem;
   font-size: 0.92rem;
   font-weight: 700;
   line-height: 1.25;
@@ -426,24 +403,15 @@ main {
 }
 
 .hero-diagram__animals {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.35rem 0.9rem;
+  display: grid;
+  place-items: center;
   width: 100%;
-  padding: 0.25rem 0 0.15rem;
 }
 
-.icon-mouse {
-  width: min(34vw, 128px);
+.icon-animals {
+  display: block;
+  width: min(100%, 420px);
   height: auto;
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.08));
-}
-
-.icon-pig {
-  width: min(48vw, 188px);
-  height: auto;
-  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.1));
 }
 
 .hero-diagram__arrows {
@@ -473,8 +441,8 @@ main {
 .outcome-card {
   display: grid;
   justify-items: center;
-  gap: 0.35rem;
-  padding: 0.75rem 0.5rem;
+  gap: 0.4rem;
+  padding: 0.85rem 0.65rem;
   border-radius: 1rem;
   background: #fafafa;
   border: 1px solid rgba(29, 29, 31, 0.08);
@@ -490,28 +458,9 @@ main {
 
 .icon-humoral,
 .icon-cellular {
-  width: min(100%, 140px);
+  display: block;
+  width: min(100%, 150px);
   height: auto;
-}
-
-.ab-float {
-  animation: ab-bob 2.6s ease-in-out infinite;
-}
-
-@keyframes fluid-pulse {
-  0%,
-  100% {
-    opacity: 0.85;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes lnp-spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes draw-arrow {
@@ -521,16 +470,6 @@ main {
   40%,
   100% {
     stroke-dashoffset: 0;
-  }
-}
-
-@keyframes ab-bob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
   }
 }
 
@@ -544,10 +483,10 @@ main {
   }
 
   .hero-diagram {
-    grid-template-columns: 1.15fr auto 1fr;
+    grid-template-columns: 1.2fr auto 1fr;
     align-items: center;
-    gap: 0.75rem 0.5rem;
-    padding: 0.35rem 1.5rem 1.5rem;
+    gap: 0.75rem 0.35rem;
+    padding: 0.25rem 1.5rem 1.5rem;
   }
 
   .hero-diagram__arrows {
@@ -555,17 +494,17 @@ main {
     place-items: center;
   }
 
-  .hero-diagram__stage--outcomes {
-    gap: 1rem;
+  .icon-syringe-lnp {
+    width: 128px;
   }
 
-  .icon-syringe {
-    width: 58px;
+  .icon-animals {
+    width: min(100%, 460px);
   }
 
-  .icon-lnp {
-    width: 58px;
-    height: 58px;
+  .icon-humoral,
+  .icon-cellular {
+    width: min(100%, 168px);
   }
 }
 
@@ -574,8 +513,9 @@ main {
     padding-inline: 2rem;
   }
 
-  .lnp-chip span {
+  .lnp-label {
     font-size: 1rem;
+    max-width: 11rem;
   }
 
   .outcome-card p {
