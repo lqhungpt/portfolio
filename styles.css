@@ -589,7 +589,7 @@ main {
 }
 
 .honors-head {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
 
 .timeline {
@@ -598,6 +598,7 @@ main {
   padding: 0;
   display: grid;
   gap: 1.25rem;
+  max-width: 42rem;
 }
 
 .timeline li {
