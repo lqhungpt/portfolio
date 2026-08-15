@@ -1040,10 +1040,7 @@ main {
 
   .page-glow,
   .site-header.is-nav-open .nav,
-  .syringe-fluid,
-  .icon-lnp,
-  .flow-arrow,
-  .ab-float {
+  .flow-arrow {
     animation: none;
   }
 }
