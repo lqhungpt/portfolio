@@ -1,5 +1,8 @@
 const root = document.documentElement;
 const toggle = document.querySelector(".theme-toggle");
+const menuToggle = document.querySelector(".menu-toggle");
+const header = document.querySelector(".site-header");
+const nav = document.getElementById("site-nav");
 const year = document.getElementById("year");
 
 if (year) {
@@ -11,9 +14,35 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
+function setNavOpen(open) {
+  header?.classList.toggle("is-nav-open", open);
+  menuToggle?.setAttribute("aria-expanded", String(open));
+  menuToggle?.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.classList.toggle("nav-open", open);
+}
+
 toggle?.addEventListener("click", () => {
   const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
   setTheme(next);
+});
+
+menuToggle?.addEventListener("click", () => {
+  const open = menuToggle.getAttribute("aria-expanded") !== "true";
+  setNavOpen(open);
+});
+
+nav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setNavOpen(false));
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setNavOpen(false);
+});
+
+window.addEventListener("resize", () => {
+  if (window.matchMedia("(min-width: 820px)").matches) {
+    setNavOpen(false);
+  }
 });
 
 window
