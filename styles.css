@@ -1,19 +1,20 @@
 :root {
-  --bg: #eef2f6;
-  --bg-elevated: #f7f9fc;
+  --bg: #fff8f0;
+  --bg-elevated: #ffffff;
   --surface: #ffffff;
-  --ink: #15202b;
-  --ink-muted: #4a5a6a;
-  --line: rgba(21, 32, 43, 0.12);
-  --accent: #e07a12;
-  --accent-strong: #c45f00;
-  --accent-soft: rgba(224, 122, 18, 0.14);
-  --glow: rgba(224, 122, 18, 0.22);
-  --ring: rgba(21, 32, 43, 0.18);
-  --shadow: 0 24px 60px rgba(21, 32, 43, 0.08);
-  --header-bg: rgba(238, 242, 246, 0.82);
-  --blueprint-stroke: rgba(21, 32, 43, 0.32);
-  --blueprint-fill: rgba(224, 122, 18, 0.18);
+  --ink: #140f0c;
+  --ink-muted: #6a5346;
+  --line: rgba(20, 15, 12, 0.12);
+  --accent: #e87800;
+  --accent-strong: #c43a12;
+  --accent-soft: rgba(232, 120, 0, 0.14);
+  --glow: rgba(232, 120, 0, 0.2);
+  --glow-red: rgba(196, 58, 18, 0.14);
+  --ring: rgba(20, 15, 12, 0.16);
+  --shadow: 0 24px 60px rgba(20, 15, 12, 0.08);
+  --header-bg: rgba(255, 248, 240, 0.88);
+  --blueprint-stroke: rgba(20, 15, 12, 0.28);
+  --blueprint-fill: rgba(232, 120, 0, 0.16);
   --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
   --font-serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -21,21 +22,22 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0d1218;
-  --bg-elevated: #121922;
-  --surface: #171f2a;
-  --ink: #edf2f7;
-  --ink-muted: #9aabbc;
-  --line: rgba(237, 242, 247, 0.12);
-  --accent: #f0a43a;
-  --accent-strong: #ffb84d;
-  --accent-soft: rgba(240, 164, 58, 0.16);
-  --glow: rgba(240, 164, 58, 0.28);
-  --ring: rgba(237, 242, 247, 0.16);
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
-  --header-bg: rgba(13, 18, 24, 0.82);
-  --blueprint-stroke: rgba(237, 242, 247, 0.34);
-  --blueprint-fill: rgba(240, 164, 58, 0.2);
+  --bg: #100c0a;
+  --bg-elevated: #17120f;
+  --surface: #1f1813;
+  --ink: #fff7ef;
+  --ink-muted: #c4b0a0;
+  --line: rgba(255, 247, 239, 0.12);
+  --accent: #f5a524;
+  --accent-strong: #ff6a2b;
+  --accent-soft: rgba(245, 165, 36, 0.16);
+  --glow: rgba(245, 165, 36, 0.24);
+  --glow-red: rgba(255, 106, 43, 0.16);
+  --ring: rgba(255, 247, 239, 0.14);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  --header-bg: rgba(16, 12, 10, 0.88);
+  --blueprint-stroke: rgba(255, 247, 239, 0.3);
+  --blueprint-fill: rgba(245, 165, 36, 0.18);
   color-scheme: dark;
 }
 
@@ -57,8 +59,8 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background:
-    radial-gradient(1200px 600px at 85% -10%, var(--glow), transparent 55%),
-    radial-gradient(900px 500px at -10% 20%, var(--accent-soft), transparent 50%),
+    radial-gradient(1100px 560px at 88% -8%, var(--glow), transparent 55%),
+    radial-gradient(820px 480px at -8% 18%, var(--glow-red), transparent 52%),
     linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%);
   -webkit-font-smoothing: antialiased;
 }
