@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hung Quoc Luong, DVM, M.Sc. — PhD student in Integrative Biomedical Sciences at the University of Nebraska–Lincoln. Viral immunology, vaccine development, and molecular virology."
+    />
+    <title>Hung Quoc Luong · Viral Immunology &amp; Virology</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (() => {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute(
+          "data-theme",
+          stored || (prefersDark ? "dark" : "light")
+        );
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="page-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top">Hung Quoc Luong</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle light and dark mode"
+        title="Toggle theme"
+      >
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2.5M12 19.5V22M4.93 4.93l1.77 1.77M17.3 17.3l1.77 1.77M2 12h2.5M19.5 12H22M4.93 19.07l1.77-1.77M17.3 6.7l1.77-1.77" />
+          </svg>
+        </span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M20.5 14.2A8.2 8.2 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z" />
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">PhD Candidate · Molecular Biology</p>
+          <h1>Hung Quoc Luong</h1>
+          <p class="hero__lede">
+            DVM, M.Sc. — building vaccines and mapping antibody responses against
+            high-consequence veterinary viruses at the Nebraska Center for Virology.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#publications">Selected papers</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+          <p class="hero__meta">
+            University of Nebraska–Lincoln · School of Veterinary Medicine and Biomedical Sciences
+          </p>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <svg class="blueprint" viewBox="0 0 520 520" role="img">
+            <defs>
+              <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.55" />
+                <stop offset="70%" stop-color="var(--accent)" stop-opacity="0.08" />
+                <stop offset="100%" stop-color="var(--accent)" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <circle class="blueprint__ring" cx="260" cy="260" r="210" />
+            <circle class="blueprint__ring blueprint__ring--mid" cx="260" cy="260" r="150" />
+            <circle class="blueprint__ring blueprint__ring--inner" cx="260" cy="260" r="90" />
+            <circle cx="260" cy="260" r="120" fill="url(#coreGlow)" />
+            <!-- Enveloped virion -->
+            <circle class="blueprint__virion" cx="260" cy="260" r="58" />
+            <g class="blueprint__spikes">
+              <ellipse cx="260" cy="178" rx="10" ry="18" />
+              <ellipse cx="332" cy="208" rx="10" ry="18" transform="rotate(45 332 208)" />
+              <ellipse cx="342" cy="280" rx="10" ry="18" transform="rotate(90 342 280)" />
+              <ellipse cx="312" cy="340" rx="10" ry="18" transform="rotate(135 312 340)" />
+              <ellipse cx="260" cy="352" rx="10" ry="18" transform="rotate(180 260 352)" />
+              <ellipse cx="208" cy="340" rx="10" ry="18" transform="rotate(225 208 340)" />
+              <ellipse cx="178" cy="280" rx="10" ry="18" transform="rotate(270 178 280)" />
+              <ellipse cx="188" cy="208" rx="10" ry="18" transform="rotate(315 188 208)" />
+            </g>
+            <!-- Antibody Y -->
+            <g class="blueprint__ab" transform="translate(380 95)">
+              <path d="M40 110 L40 55 L12 12 M40 55 L68 12" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="68" cy="12" r="6" />
+              <circle cx="40" cy="110" r="5" />
+            </g>
+            <g class="blueprint__ab blueprint__ab--secondary" transform="translate(70 340) rotate(-25)">
+              <path d="M40 110 L40 55 L12 12 M40 55 L68 12" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="68" cy="12" r="6" />
+              <circle cx="40" cy="110" r="5" />
+            </g>
+            <text class="blueprint__label" x="260" y="470" text-anchor="middle">
+              viral immunology · epitope mapping
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <section id="research" class="section">
+        <div class="section__head">
+          <p class="eyebrow">Focus</p>
+          <h2>Research</h2>
+          <p class="section__lede">
+            Vaccine development, viral immunology, molecular evolution, and metagenomics—
+            with emphasis on selected-agent pathogens of global agricultural importance.
+          </p>
+        </div>
+        <ul class="focus-grid">
+          <li>
+            <h3>Vaccine development</h3>
+            <p>
+              Live-attenuated and inactivated strategies against African swine fever virus
+              and highly pathogenic avian influenza.
+            </p>
+          </li>
+          <li>
+            <h3>Humoral immunity</h3>
+            <p>
+              Profiling swine antibody responses to structural viral proteins under
+              vaccination and natural infection.
+            </p>
+          </li>
+          <li>
+            <h3>Serological platforms</h3>
+            <p>
+              Building and validating LIPS, LACA, and ELISA assays for sensitive detection
+              of pathogen-specific antibodies.
+            </p>
+          </li>
+          <li>
+            <h3>Molecular virology</h3>
+            <p>
+              Characterizing PRRSV, ASFV, and swine influenza viruses, including nanopore
+              metagenomics and cell-line development.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" class="section section--split">
+        <div class="section__head">
+          <p class="eyebrow">Path</p>
+          <h2>Experience &amp; education</h2>
+        </div>
+        <div class="split">
+          <div>
+            <h3 class="subhead">Appointments</h3>
+            <ol class="timeline">
+              <li>
+                <span class="timeline__when">2024 – present</span>
+                <strong>Graduate Research Assistant</strong>
+                <span>Integrative Biomedical Sciences PhD · UNL / Nebraska Center for Virology</span>
+              </li>
+              <li>
+                <span class="timeline__when">2020 – 2023</span>
+                <strong>Visiting Research Scholar</strong>
+                <span>Animal Science &amp; Nebraska Center for Virology, UNL</span>
+              </li>
+              <li>
+                <span class="timeline__when">2013 – 2017</span>
+                <strong>Research Staff</strong>
+                <span>Key Laboratory of Veterinary Biotechnology, VNUA</span>
+              </li>
+              <li>
+                <span class="timeline__when">2011 – 2013</span>
+                <strong>Research Student</strong>
+                <span>Key Laboratory of Veterinary Biotechnology, HUA</span>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="subhead">Education</h3>
+            <ol class="timeline">
+              <li>
+                <span class="timeline__when">2024 – 2028</span>
+                <strong>Ph.D. Integrative Biomedical Sciences</strong>
+                <span>University of Nebraska–Lincoln, USA</span>
+              </li>
+              <li>
+                <span class="timeline__when">2015 – 2017</span>
+                <strong>M.Sc. Veterinary Sciences</strong>
+                <span>Vietnam National University of Agriculture</span>
+              </li>
+              <li>
+                <span class="timeline__when">2008 – 2013</span>
+                <strong>DVM (BVSc)</strong>
+                <span>Hanoi University of Agriculture</span>
+              </li>
+            </ol>
+            <h3 class="subhead honors-head">Honors</h3>
+            <ul class="plain-list">
+              <li>2023 Travel Award — NA-PRRSV / NC229 Symposium</li>
+              <li>2013 First Place — Vietnam Ministry of Education &amp; Training scientific research (undergraduate)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="section">
+        <div class="section__head">
+          <p class="eyebrow">Scholarship</p>
+          <h2>Selected publications</h2>
+          <p class="section__lede">
+            Peer-reviewed work on ASFV diagnostics, vaccine antibody landscapes, and PRRSV
+            structural-protein responses.
+          </p>
+        </div>
+        <ol class="pubs">
+          <li>
+            <a
+              href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11289199/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Evaluation of the diagnostic sensitivity and specificity of two pen-side tests for detecting African swine fever virus in experimentally infected pigs
+            </a>
+            <p><em>Archives of Virology</em>, 2024 · Vu, Luong, et al.</p>
+          </li>
+          <li>
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/38006019/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Comparative analysis of swine antibody responses following vaccination with live-attenuated and killed African swine fever virus vaccines
+            </a>
+            <p><em>Vaccines</em>, 2023 · Luong et al. (first author)</p>
+          </li>
+          <li>
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/34799123/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Differential antibody responses in sows and finishing pigs naturally infected with African swine fever virus under field conditions
+            </a>
+            <p><em>Virus Research</em>, 2022 · Luong et al. (first author)</p>
+          </li>
+          <li>
+            <a
+              href="https://pubmed.ncbi.nlm.nih.gov/32947931/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Evaluation of antibody response directed against porcine reproductive and respiratory syndrome virus structural proteins
+            </a>
+            <p><em>Vaccines</em>, 2020 · Luong et al. (first author)</p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills" class="section section--skills">
+        <div class="section__head">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Methods &amp; membership</h2>
+        </div>
+        <div class="skills-row">
+          <p>
+            Molecular biology · Sequencing · Viral infection assays · Viral immunology ·
+            Cell culture · Histology · Microscopy · Bioinformatics · Nanopore metagenomics
+          </p>
+          <p class="skills-meta">
+            Member, American Society for Virology · Peer reviewer for
+            <em>Scientific Reports</em>, <em>BMC Veterinary Research</em>,
+            <em>Porcine Health Management</em>, and <em>Veterinary World</em>
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--contact">
+        <div class="section__head">
+          <p class="eyebrow">Connect</p>
+          <h2>Contact</h2>
+          <p class="section__lede">
+            Open to scientific collaboration on viral immunology, vaccine evaluation, and
+            veterinary pathogen diagnostics.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:qluong4@huskers.unl.edu">qluong4@huskers.unl.edu</a>
+          <a
+            href="https://orcid.org/0000-0001-7372-0883"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ORCID</a
+          >
+          <a
+            href="https://scholar.google.com/scholar?q=Hung+Quoc+Luong+ASFV"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Google Scholar</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Hung Quoc Luong · Lincoln, Nebraska</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
