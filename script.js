@@ -4,9 +4,6 @@ const menuToggle = document.querySelector(".menu-toggle");
 const header = document.querySelector(".site-header");
 const nav = document.getElementById("site-nav");
 const year = document.getElementById("year");
-const virusTrack = document.querySelector(".virus-track");
-const shelfPrev = document.querySelector(".shelf-nav--prev");
-const shelfNext = document.querySelector(".shelf-nav--next");
 
 if (year) {
   year.textContent = String(new Date().getFullYear());
@@ -55,12 +52,3 @@ window
       setTheme(event.matches ? "dark" : "light");
     }
   });
-
-function scrollVirusShelf(direction) {
-  if (!virusTrack) return;
-  const amount = Math.min(virusTrack.clientWidth * 0.85, 360);
-  virusTrack.scrollBy({ left: direction * amount, behavior: "smooth" });
-}
-
-shelfPrev?.addEventListener("click", () => scrollVirusShelf(-1));
-shelfNext?.addEventListener("click", () => scrollVirusShelf(1));
