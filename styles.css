@@ -417,98 +417,26 @@ main {
 .hero-diagram__arrows {
   display: grid;
   justify-items: center;
-  gap: 0.35rem;
-  padding: 0.25rem 0;
-}
-
-.arrows-label {
-  margin: 0;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #6e6e73;
+  align-items: center;
+  padding: 0.15rem 0;
 }
 
 .icon-arrows {
-  width: min(58vw, 170px);
+  width: min(88vw, 280px);
   height: auto;
 }
 
 .flow-arrow {
-  stroke-dasharray: 220;
-  stroke-dashoffset: 220;
-  animation: draw-arrow 2.4s ease-in-out infinite;
+  stroke-dasharray: 260;
+  stroke-dashoffset: 0;
+  animation: none;
 }
 
-.flow-arrow--trunk {
-  stroke-dasharray: 120;
-  stroke-dashoffset: 120;
-  animation-name: draw-trunk;
-}
-
-.flow-arrow--branch {
-  animation-delay: 0.28s;
-}
-
+.flow-arrow--trunk,
+.flow-arrow--branch,
 .flow-head {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: pulse-head 2.4s ease-in-out infinite;
-  animation-delay: 0.45s;
-}
-
-@keyframes draw-trunk {
-  0% {
-    stroke-dashoffset: 120;
-    opacity: 0.35;
-  }
-  30% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  75% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0.55;
-  }
-}
-
-@keyframes draw-arrow {
-  0%,
-  20% {
-    stroke-dashoffset: 220;
-    opacity: 0.2;
-  }
-  55% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  80% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0.5;
-  }
-}
-
-@keyframes pulse-head {
-  0%,
-  35% {
-    opacity: 0.15;
-  }
-  55%,
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.4;
-  }
+  opacity: 1;
+  animation: none;
 }
 
 .hero-diagram__stage--outcomes {
@@ -564,7 +492,7 @@ main {
   }
 
   .icon-arrows {
-    width: min(100%, 140px);
+    width: min(100%, 280px);
   }
 
   .icon-syringe-lnp {
@@ -587,11 +515,7 @@ main {
   }
 
   .icon-arrows {
-    width: 160px;
-  }
-
-  .arrows-label {
-    font-size: 0.82rem;
+    width: 320px;
   }
 
   .lnp-label {
